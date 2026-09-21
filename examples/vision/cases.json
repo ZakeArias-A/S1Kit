@@ -1,0 +1,124 @@
+[
+  {
+    "id": "invoice-1",
+    "group": "invoice",
+    "images": [
+      "invoice-1.png"
+    ],
+    "expected": "yes",
+    "request": {
+      "state": "Determine payment status from the attached invoice.",
+      "questions": {
+        "decision": {
+          "type": "noul",
+          "instructions": "Has this invoice been paid in full? A zero balance due means paid in full."
+        }
+      }
+    }
+  },
+  {
+    "id": "invoice-2",
+    "group": "invoice",
+    "images": [
+      "invoice-2.png"
+    ],
+    "expected": "no",
+    "request": {
+      "state": "Determine payment status from the attached invoice.",
+      "questions": {
+        "decision": {
+          "type": "noul",
+          "instructions": "Has this invoice been paid in full? A zero balance due means paid in full."
+        }
+      }
+    }
+  },
+  {
+    "id": "inventory-1",
+    "group": "inventory",
+    "images": [
+      "inventory-1.png"
+    ],
+    "expected": "a",
+    "request": {
+      "state": "Choose a replenishment action using the attached inventory chart.",
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "Which part has stock below the reorder threshold of 25 units?",
+          "criteria": {
+            "a": "Reorder Part A",
+            "b": "Reorder Part B",
+            "c": "Reorder Part C"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "inventory-2",
+    "group": "inventory",
+    "images": [
+      "inventory-2.png"
+    ],
+    "expected": "b",
+    "request": {
+      "state": "Choose a replenishment action using the attached inventory chart.",
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "Which part has stock below the reorder threshold of 25 units?",
+          "criteria": {
+            "a": "Reorder Part A",
+            "b": "Reorder Part B",
+            "c": "Reorder Part C"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "services-1",
+    "group": "services",
+    "images": [
+      "services-1.png"
+    ],
+    "expected": "0",
+    "request": {
+      "state": "Assess the attached service status dashboard.",
+      "questions": {
+        "decision": {
+          "type": "score",
+          "instructions": "Rate the current incident severity using the displayed service statuses.",
+          "criteria": [
+            "All services healthy",
+            "At least one degraded service, but none down",
+            "At least one service down"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "services-2",
+    "group": "services",
+    "images": [
+      "services-2.png"
+    ],
+    "expected": "2",
+    "request": {
+      "state": "Assess the attached service status dashboard.",
+      "questions": {
+        "decision": {
+          "type": "score",
+          "instructions": "Rate the current incident severity using the displayed service statuses.",
+          "criteria": [
+            "All services healthy",
+            "At least one degraded service, but none down",
+            "At least one service down"
+          ]
+        }
+      }
+    }
+  }
+]

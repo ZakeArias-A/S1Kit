@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.egg
+/build/
+/dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/
+.ipynb_checkpoints/
+.coverage*
+/htmlcov/
+/coverage.xml
+junit*.xml
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.dpapi
+
+# Model weights, caches and generated output
+.cache/
+/models/
+/checkpoints/
+/runs/
+/outputs/
+/artifacts/
+/.local/
+/site/
+*.log
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+*.bin
+
+# Editor and OS files
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+*~

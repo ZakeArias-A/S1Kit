@@ -1,0 +1,290 @@
+{
+  "s1kit": {
+    "started_at": "2026-09-21T10:36:19.052760+00:00",
+    "backend": "s1kit",
+    "jevbench_revision": "15028ef00ed3949e05c5821492253ed1f212d681",
+    "dataset_hashes": {
+      "easy": "3cbd0e951fa8059741955ef2bd3273b0bb60aecae8f4a68b89872f55f7376b3d",
+      "standard": "914276022fa5f0ea70e4231f2af98e68c67b274b61bea8c440b33890401cd2f9",
+      "hard": "e816e106f562dec75a8da12e69b75e957a4bbd9f6300f1145fc71837327a3c61"
+    },
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "config": {
+      "factory": "examples.qwen:load_engine",
+      "kwargs": {
+        "device": "cuda",
+        "quantization": "4bit",
+        "max_tokens": 8192
+      }
+    },
+    "warmup_requests": 1,
+    "retries": 0,
+    "timing": "Synchronous wall time including preprocessing, excluding loading; API includes network",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.17.0",
+    "threads": 4,
+    "temperature": 1.0,
+    "device": "cuda:0",
+    "dtype": "torch.bfloat16",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "source_sha256": {
+      "src/s1kit/__init__.py": "e4ce59129ee7c5cb26255a0c109ba68b38ca43a636ac077234fa6ada0b97be08",
+      "src/s1kit/engine.py": "978230ae3ad5f334455b213776553e37802e76e5e0bc36094e6a6bf013d53bd6",
+      "src/s1kit/prompts.py": "8cb52d4c7bcaf139e35eb4eb52eb9d1b9f8978e4831cb6fcddd4c190d32b4ff0",
+      "src/s1kit/readout.py": "79b7e4e74e4a8c6cca7f35a9c55061734d3d8791eda3220b530b5bdbf43e5a9b",
+      "src/s1kit/schema.py": "41a44a0b458b0ddd47861279714958854e0fb15d82649fbc73d004396040e89a",
+      "benchmarks/run.py": "28eb816fbaf6392183b66a4c8bad2d01bf98e0126f94d6e01b3aa45884b2566e"
+    },
+    "completed_tasks": 231,
+    "finished_at": "2026-09-21T10:38:51.697141+00:00",
+    "summary": {
+      "easy": {
+        "count": 48,
+        "correct": 48,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "renormalized": 0
+      },
+      "standard": {
+        "count": 72,
+        "correct": 64,
+        "accuracy": 0.8888888888888888,
+        "invalid": 0,
+        "renormalized": 0
+      },
+      "hard": {
+        "count": 111,
+        "correct": 61,
+        "accuracy": 0.5495495495495496,
+        "invalid": 0,
+        "renormalized": 0
+      },
+      "all": {
+        "count": 231,
+        "correct": 173,
+        "accuracy": 0.7489177489177489,
+        "invalid": 0,
+        "renormalized": 0
+      }
+    },
+    "latency_seconds": {
+      "p50": 0.20394010000745766,
+      "p95": 2.039847000007285
+    },
+    "family_accuracy": {
+      "adequacy": {
+        "correct": 9,
+        "count": 12
+      },
+      "adversarial": {
+        "correct": 6,
+        "count": 6
+      },
+      "ambiguous": {
+        "correct": 5,
+        "count": 7
+      },
+      "extraction": {
+        "correct": 22,
+        "count": 24
+      },
+      "fact": {
+        "correct": 12,
+        "count": 12
+      },
+      "intent": {
+        "correct": 23,
+        "count": 24
+      },
+      "judge_hard": {
+        "correct": 9,
+        "count": 17
+      },
+      "long_policy": {
+        "correct": 9,
+        "count": 19
+      },
+      "multi_hop": {
+        "correct": 8,
+        "count": 18
+      },
+      "ordinal": {
+        "correct": 12,
+        "count": 12
+      },
+      "policy": {
+        "correct": 10,
+        "count": 12
+      },
+      "probability": {
+        "correct": 5,
+        "count": 10
+      },
+      "routing": {
+        "correct": 12,
+        "count": 12
+      },
+      "routing_hard": {
+        "correct": 5,
+        "count": 5
+      },
+      "temporal_numeric": {
+        "correct": 4,
+        "count": 15
+      },
+      "tool_selection": {
+        "correct": 12,
+        "count": 12
+      },
+      "tradeoff": {
+        "correct": 4,
+        "count": 6
+      },
+      "trap": {
+        "correct": 6,
+        "count": 8
+      }
+    },
+    "input_tokens": 160308,
+    "max_input_tokens": 4030
+  },
+  "jev": {
+    "started_at": "2026-09-21T10:15:32.005188+00:00",
+    "backend": "typesafe",
+    "jevbench_revision": "15028ef00ed3949e05c5821492253ed1f212d681",
+    "dataset_hashes": {
+      "easy": "3cbd0e951fa8059741955ef2bd3273b0bb60aecae8f4a68b89872f55f7376b3d",
+      "standard": "914276022fa5f0ea70e4231f2af98e68c67b274b61bea8c440b33890401cd2f9",
+      "hard": "e816e106f562dec75a8da12e69b75e957a4bbd9f6300f1145fc71837327a3c61"
+    },
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "config": null,
+    "warmup_requests": 1,
+    "retries": 0,
+    "timing": "Synchronous wall time including preprocessing, excluding loading; API includes network",
+    "source_sha256": {
+      "src/s1kit/__init__.py": "e4ce59129ee7c5cb26255a0c109ba68b38ca43a636ac077234fa6ada0b97be08",
+      "src/s1kit/engine.py": "978230ae3ad5f334455b213776553e37802e76e5e0bc36094e6a6bf013d53bd6",
+      "src/s1kit/prompts.py": "8cb52d4c7bcaf139e35eb4eb52eb9d1b9f8978e4831cb6fcddd4c190d32b4ff0",
+      "src/s1kit/readout.py": "79b7e4e74e4a8c6cca7f35a9c55061734d3d8791eda3220b530b5bdbf43e5a9b",
+      "src/s1kit/schema.py": "41a44a0b458b0ddd47861279714958854e0fb15d82649fbc73d004396040e89a",
+      "benchmarks/run.py": "8aa9238ef3ad46100cc9998799a792354f9e91f29ab863e417451e4bae50e750"
+    },
+    "completed_tasks": 231,
+    "finished_at": "2026-09-21T10:18:05.345723+00:00",
+    "summary": {
+      "easy": {
+        "count": 48,
+        "correct": 48,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "renormalized": 0
+      },
+      "standard": {
+        "count": 72,
+        "correct": 70,
+        "accuracy": 0.9722222222222222,
+        "invalid": 0,
+        "renormalized": 0
+      },
+      "hard": {
+        "count": 111,
+        "correct": 79,
+        "accuracy": 0.7117117117117117,
+        "invalid": 0,
+        "renormalized": 0
+      },
+      "all": {
+        "count": 231,
+        "correct": 197,
+        "accuracy": 0.8528138528138528,
+        "invalid": 0,
+        "renormalized": 0
+      }
+    },
+    "latency_seconds": {
+      "p50": 0.5752580999978818,
+      "p95": 0.6356298000027891
+    },
+    "family_accuracy": {
+      "adequacy": {
+        "correct": 12,
+        "count": 12
+      },
+      "adversarial": {
+        "correct": 6,
+        "count": 6
+      },
+      "ambiguous": {
+        "correct": 6,
+        "count": 7
+      },
+      "extraction": {
+        "correct": 24,
+        "count": 24
+      },
+      "fact": {
+        "correct": 12,
+        "count": 12
+      },
+      "intent": {
+        "correct": 24,
+        "count": 24
+      },
+      "judge_hard": {
+        "correct": 12,
+        "count": 17
+      },
+      "long_policy": {
+        "correct": 12,
+        "count": 19
+      },
+      "multi_hop": {
+        "correct": 15,
+        "count": 18
+      },
+      "ordinal": {
+        "correct": 12,
+        "count": 12
+      },
+      "policy": {
+        "correct": 10,
+        "count": 12
+      },
+      "probability": {
+        "correct": 7,
+        "count": 10
+      },
+      "routing": {
+        "correct": 12,
+        "count": 12
+      },
+      "routing_hard": {
+        "correct": 5,
+        "count": 5
+      },
+      "temporal_numeric": {
+        "correct": 3,
+        "count": 15
+      },
+      "tool_selection": {
+        "correct": 12,
+        "count": 12
+      },
+      "tradeoff": {
+        "correct": 5,
+        "count": 6
+      },
+      "trap": {
+        "correct": 8,
+        "count": 8
+      }
+    },
+    "models_returned": [
+      "jev-1.13.0"
+    ],
+    "input_tokens": 211309
+  }
+}

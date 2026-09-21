@@ -1,0 +1,8 @@
+{
+  "factory": "examples.qwen:load_engine",
+  "kwargs": {
+    "device": "cuda",
+    "quantization": "4bit",
+    "max_tokens": 8192
+  }
+}

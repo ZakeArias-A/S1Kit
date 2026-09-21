@@ -1,0 +1,10 @@
+{
+  "state": "Observe the attached image.",
+  "questions": {
+    "color": {
+      "type": "choice",
+      "instructions": "Which of these colors is most prominent in the image?",
+      "criteria": {"red": "Red", "green": "Green", "blue": "Blue"}
+    }
+  }
+}

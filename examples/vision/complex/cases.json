@@ -1,0 +1,131 @@
+[
+  {
+    "id": "return-no-stock",
+    "group": "returns",
+    "images": [
+      "order-1.png",
+      "policy.png",
+      "item.jpg"
+    ],
+    "expected": "refund",
+    "request": {
+      "state": "Review this return case using the attached order page, policy document and customer photo, if present. Apply the current policy to the evidence.",
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "What is the next action for this return request?",
+          "criteria": {
+            "refund": "Approve a refund for the color mismatch",
+            "replace": "Send a replacement of the ordered SKU",
+            "request_photo": "Request a clear customer photo before deciding",
+            "manual_review": "Send the case for manual review",
+            "reject": "Reject the color-mismatch claim"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "return-in-stock",
+    "group": "returns",
+    "images": [
+      "order-2.png",
+      "policy.png",
+      "item.jpg"
+    ],
+    "expected": "replace",
+    "request": {
+      "state": "Review this return case using the attached order page, policy document and customer photo, if present. Apply the current policy to the evidence.",
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "What is the next action for this return request?",
+          "criteria": {
+            "refund": "Approve a refund for the color mismatch",
+            "replace": "Send a replacement of the ordered SKU",
+            "request_photo": "Request a clear customer photo before deciding",
+            "manual_review": "Send the case for manual review",
+            "reject": "Reject the color-mismatch claim"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "return-color-matches",
+    "group": "returns",
+    "images": [
+      "order-3.png",
+      "policy.png",
+      "item.jpg"
+    ],
+    "expected": "reject",
+    "request": {
+      "state": "Review this return case using the attached order page, policy document and customer photo, if present. Apply the current policy to the evidence.",
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "What is the next action for this return request?",
+          "criteria": {
+            "refund": "Approve a refund for the color mismatch",
+            "replace": "Send a replacement of the ordered SKU",
+            "request_photo": "Request a clear customer photo before deciding",
+            "manual_review": "Send the case for manual review",
+            "reject": "Reject the color-mismatch claim"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "return-outside-window",
+    "group": "returns",
+    "images": [
+      "order-4.png",
+      "policy.png",
+      "item.jpg"
+    ],
+    "expected": "manual_review",
+    "request": {
+      "state": "Review this return case using the attached order page, policy document and customer photo, if present. Apply the current policy to the evidence.",
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "What is the next action for this return request?",
+          "criteria": {
+            "refund": "Approve a refund for the color mismatch",
+            "replace": "Send a replacement of the ordered SKU",
+            "request_photo": "Request a clear customer photo before deciding",
+            "manual_review": "Send the case for manual review",
+            "reject": "Reject the color-mismatch claim"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "return-no-photo",
+    "group": "returns",
+    "images": [
+      "order-1.png",
+      "policy.png"
+    ],
+    "expected": "request_photo",
+    "request": {
+      "state": "Review this return case using the attached order page, policy document and customer photo, if present. Apply the current policy to the evidence.",
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "What is the next action for this return request?",
+          "criteria": {
+            "refund": "Approve a refund for the color mismatch",
+            "replace": "Send a replacement of the ordered SKU",
+            "request_photo": "Request a clear customer photo before deciding",
+            "manual_review": "Send the case for manual review",
+            "reject": "Reject the color-mismatch claim"
+          }
+        }
+      }
+    }
+  }
+]

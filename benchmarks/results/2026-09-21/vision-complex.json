@@ -1,0 +1,221 @@
+{
+  "created_at": "2026-09-21T10:44:41.818664+00:00",
+  "config": {
+    "factory": "examples.qwen:load_engine",
+    "kwargs": {
+      "device": "cuda",
+      "quantization": "4bit",
+      "max_tokens": 8192
+    }
+  },
+  "dtype": "torch.bfloat16",
+  "device": "cuda:0",
+  "torch": "2.11.0+cu130",
+  "threads": 4,
+  "temperature": 1.0,
+  "transformers": "5.17.0",
+  "pillow": "12.3.0",
+  "cases_sha256": "b06d01eb517cb54420b676e03823f8d9dc1f77566da5e39b4725cd7d3eb18860",
+  "cases": [
+    {
+      "id": "return-no-stock",
+      "expected": "refund",
+      "predicted": "manual_review",
+      "correct": false,
+      "answer": {
+        "choice": "replace",
+        "probabilities": {
+          "refund": 0.022178521968172892,
+          "replace": 0.3931237082730187,
+          "request_photo": 0.14462213011072322,
+          "manual_review": 0.3931237082730187,
+          "reject": 0.04695193137506658
+        },
+        "confidence": 0.24140463534127332
+      },
+      "input_tokens": 908,
+      "seconds": 1.020346299992525,
+      "image_sha256": {
+        "order-1.png": "05b596fea9b11273126764dda76d932cedfbbb2945ca4126ea4413f620ddfa15",
+        "policy.png": "298c34e62be94c7f40f36d9652f3ee63b28e2ddf61a1fe22497e4de2ea3add9a",
+        "item.jpg": "169025ceb71fabbd4c4331a7e474c4e14c2d13810e06e7b120627ffda4969d39"
+      },
+      "image_sizes": {
+        "order-1.png": [
+          1040,
+          680
+        ],
+        "policy.png": [
+          820,
+          1080
+        ],
+        "item.jpg": [
+          489,
+          500
+        ]
+      }
+    },
+    {
+      "id": "return-in-stock",
+      "expected": "replace",
+      "predicted": "replace",
+      "correct": true,
+      "answer": {
+        "choice": "replace",
+        "probabilities": {
+          "refund": 0.01555822289883836,
+          "replace": 0.5838180071342743,
+          "request_photo": 0.11496058179918409,
+          "manual_review": 0.24337155357867543,
+          "reject": 0.04229163458902772
+        },
+        "confidence": 0.4797725089178429
+      },
+      "input_tokens": 908,
+      "seconds": 0.8592383999930462,
+      "image_sha256": {
+        "order-2.png": "1e7f2978e3bf161bbcaefd18a4f87a2054f3ca39638c35700ad0091ed3f7b127",
+        "policy.png": "298c34e62be94c7f40f36d9652f3ee63b28e2ddf61a1fe22497e4de2ea3add9a",
+        "item.jpg": "169025ceb71fabbd4c4331a7e474c4e14c2d13810e06e7b120627ffda4969d39"
+      },
+      "image_sizes": {
+        "order-2.png": [
+          1040,
+          680
+        ],
+        "policy.png": [
+          820,
+          1080
+        ],
+        "item.jpg": [
+          489,
+          500
+        ]
+      }
+    },
+    {
+      "id": "return-color-matches",
+      "expected": "reject",
+      "predicted": "replace",
+      "correct": false,
+      "answer": {
+        "choice": "replace",
+        "probabilities": {
+          "refund": 0.01222907995775945,
+          "replace": 0.7565863861341586,
+          "request_photo": 0.07037349625001059,
+          "manual_review": 0.13147499987945394,
+          "reject": 0.029336037778617347
+        },
+        "confidence": 0.6957329826676983
+      },
+      "input_tokens": 908,
+      "seconds": 0.8595982999977423,
+      "image_sha256": {
+        "order-3.png": "35822c86f0f57ff06ecbf09bc9fc740acc7e5d8d8dd51c02b4a875ea97527688",
+        "policy.png": "298c34e62be94c7f40f36d9652f3ee63b28e2ddf61a1fe22497e4de2ea3add9a",
+        "item.jpg": "169025ceb71fabbd4c4331a7e474c4e14c2d13810e06e7b120627ffda4969d39"
+      },
+      "image_sizes": {
+        "order-3.png": [
+          1040,
+          680
+        ],
+        "policy.png": [
+          820,
+          1080
+        ],
+        "item.jpg": [
+          489,
+          500
+        ]
+      }
+    },
+    {
+      "id": "return-outside-window",
+      "expected": "manual_review",
+      "predicted": "replace",
+      "correct": false,
+      "answer": {
+        "choice": "replace",
+        "probabilities": {
+          "refund": 0.016458041652050042,
+          "replace": 0.5450154876626202,
+          "request_photo": 0.1073199126878773,
+          "manual_review": 0.2917257684912682,
+          "reject": 0.03948078950618428
+        },
+        "confidence": 0.4312693595782752
+      },
+      "input_tokens": 908,
+      "seconds": 0.8819567999889841,
+      "image_sha256": {
+        "order-4.png": "fecee0f876ec4f0931e2c50aa4e9f23e28f8b2bf22fd23a7a82d6fffba151f56",
+        "policy.png": "298c34e62be94c7f40f36d9652f3ee63b28e2ddf61a1fe22497e4de2ea3add9a",
+        "item.jpg": "169025ceb71fabbd4c4331a7e474c4e14c2d13810e06e7b120627ffda4969d39"
+      },
+      "image_sizes": {
+        "order-4.png": [
+          1040,
+          680
+        ],
+        "policy.png": [
+          820,
+          1080
+        ],
+        "item.jpg": [
+          489,
+          500
+        ]
+      }
+    },
+    {
+      "id": "return-no-photo",
+      "expected": "request_photo",
+      "predicted": "replace",
+      "correct": false,
+      "answer": {
+        "choice": "replace",
+        "probabilities": {
+          "refund": 0.02235208866955681,
+          "replace": 0.5764679646471097,
+          "request_photo": 0.10017511148958005,
+          "manual_review": 0.2723041852259844,
+          "reject": 0.028700649967769026
+        },
+        "confidence": 0.4705849558088871
+      },
+      "input_tokens": 666,
+      "seconds": 0.6522282999940217,
+      "image_sha256": {
+        "order-1.png": "05b596fea9b11273126764dda76d932cedfbbb2945ca4126ea4413f620ddfa15",
+        "policy.png": "298c34e62be94c7f40f36d9652f3ee63b28e2ddf61a1fe22497e4de2ea3add9a"
+      },
+      "image_sizes": {
+        "order-1.png": [
+          1040,
+          680
+        ],
+        "policy.png": [
+          820,
+          1080
+        ]
+      }
+    }
+  ],
+  "text_only_controls": {
+    "returns": {
+      "choice": "request_photo",
+      "probabilities": {
+        "refund": 0.11475945763245894,
+        "replace": 0.2143988927989558,
+        "request_photo": 0.45388245961712853,
+        "manual_review": 0.14735406040537732,
+        "reject": 0.06960512954607934
+      },
+      "confidence": 0.31735307452141065
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "cases_hash_format": "UTF-8 with LF line endings"
+}

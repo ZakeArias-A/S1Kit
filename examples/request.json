@@ -1,0 +1,19 @@
+{
+  "state": {"message": "PDF 导出失败，但 CSV 可用。"},
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "选择主要意图。",
+      "criteria": {"bug": "报告功能故障", "feature": "请求新增功能"}
+    },
+    "workaround": {
+      "type": "noul",
+      "instructions": "是否存在可用的替代导出方式？"
+    },
+    "severity": {
+      "type": "score",
+      "instructions": "判断故障严重程度。",
+      "criteria": ["功能正常", "部分失效但有替代", "全部失效且无替代"]
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "created_at": "2026-09-21T10:39:17.174465+00:00",
+  "config": {
+    "factory": "examples.qwen:load_engine",
+    "kwargs": {
+      "device": "cuda",
+      "quantization": "4bit",
+      "max_tokens": 8192
+    }
+  },
+  "dtype": "torch.bfloat16",
+  "device": "cuda:0",
+  "torch": "2.11.0+cu130",
+  "threads": 4,
+  "temperature": 1.0,
+  "transformers": "5.17.0",
+  "pillow": "12.3.0",
+  "cases_sha256": "dd89c78b2a53c3a979491822b9b6bc57ad31778c40fb67e40d40dfc0b0ffa648",
+  "cases": [
+    {
+      "id": "invoice-1",
+      "expected": "yes",
+      "predicted": "yes",
+      "correct": true,
+      "answer": {
+        "noul": 0.994445075296309
+      },
+      "input_tokens": 343,
+      "seconds": 0.49048839999886695,
+      "image_sha256": {
+        "invoice-1.png": "fca05e9a59a3ec64409c94a14035a48bc7855fc62357a973b3b2f3eda18278c0"
+      },
+      "image_sizes": {
+        "invoice-1.png": [
+          640,
+          360
+        ]
+      }
+    },
+    {
+      "id": "invoice-2",
+      "expected": "no",
+      "predicted": "yes",
+      "correct": false,
+      "answer": {
+        "noul": 0.9770226300899744
+      },
+      "input_tokens": 343,
+      "seconds": 0.31939299999794457,
+      "image_sha256": {
+        "invoice-2.png": "d29bfdf02d108dca5e12de0f601155edf7c63892e6e91bff83cec7164ad5e47b"
+      },
+      "image_sizes": {
+        "invoice-2.png": [
+          640,
+          360
+        ]
+      }
+    },
+    {
+      "id": "inventory-1",
+      "expected": "a",
+      "predicted": "a",
+      "correct": true,
+      "answer": {
+        "choice": "a",
+        "probabilities": {
+          "a": 0.711269036798178,
+          "b": 0.08494897230101703,
+          "c": 0.20378199090080507
+        },
+        "confidence": 0.566903555197267
+      },
+      "input_tokens": 364,
+      "seconds": 0.32500669998989906,
+      "image_sha256": {
+        "inventory-1.png": "f7142360e6112e7a507479f1e2a2dc4fbfc68cc2df823b22f8d0e5f835687389"
+      },
+      "image_sizes": {
+        "inventory-1.png": [
+          640,
+          360
+        ]
+      }
+    },
+    {
+      "id": "inventory-2",
+      "expected": "b",
+      "predicted": "b",
+      "correct": true,
+      "answer": {
+        "choice": "b",
+        "probabilities": {
+          "a": 0.03035586274147787,
+          "b": 0.8871283471811658,
+          "c": 0.08251579007735628
+        },
+        "confidence": 0.8306925207717486
+      },
+      "input_tokens": 364,
+      "seconds": 0.3231172000087099,
+      "image_sha256": {
+        "inventory-2.png": "785c7f086dfdbd42a00d317e024d9c27e3e7d95a21a926ac0db0572baeb5a6a3"
+      },
+      "image_sizes": {
+        "inventory-2.png": [
+          640,
+          360
+        ]
+      }
+    },
+    {
+      "id": "services-1",
+      "expected": "0",
+      "predicted": "0",
+      "correct": true,
+      "answer": {
+        "score": 0.458119524806495,
+        "legend": {
+          "0": "All services healthy",
+          "1": "At least one degraded service, but none down",
+          "2": "At least one service down"
+        },
+        "probabilities": {
+          "0": 0.7594731860969823,
+          "1": 0.022934102999540427,
+          "2": 0.2175927109034773
+        },
+        "confidence": 0.31282071279025747
+      },
+      "input_tokens": 362,
+      "seconds": 0.3346680999966338,
+      "image_sha256": {
+        "services-1.png": "b0000aee4f5d2b04096b4738982fd848b1517ee466dc9196708a415cf4500039"
+      },
+      "image_sizes": {
+        "services-1.png": [
+          640,
+          360
+        ]
+      }
+    },
+    {
+      "id": "services-2",
+      "expected": "2",
+      "predicted": "2",
+      "correct": true,
+      "answer": {
+        "score": 1.978697580369935,
+        "legend": {
+          "0": "All services healthy",
+          "1": "At least one degraded service, but none down",
+          "2": "At least one service down"
+        },
+        "probabilities": {
+          "0": 0.007529940039559122,
+          "1": 0.006242539550946989,
+          "2": 0.986227520409494
+        },
+        "confidence": 0.9680463705549022
+      },
+      "input_tokens": 362,
+      "seconds": 0.3189637000032235,
+      "image_sha256": {
+        "services-2.png": "26424b1a2cccbc4c5ab2bca7655d95fe37dace566833f3f2fab8fa017d394c5f"
+      },
+      "image_sizes": {
+        "services-2.png": [
+          640,
+          360
+        ]
+      }
+    }
+  ],
+  "text_only_controls": {
+    "invoice": {
+      "noul": 0.7549149868676283
+    },
+    "inventory": {
+      "choice": "c",
+      "probabilities": {
+        "a": 0.24083204345282969,
+        "b": 0.3092344649462799,
+        "c": 0.44993349160089036
+      },
+      "confidence": 0.17490023740133553
+    },
+    "services": {
+      "score": 1.2881981269680995,
+      "legend": {
+        "0": "All services healthy",
+        "1": "At least one degraded service, but none down",
+        "2": "At least one service down"
+      },
+      "probabilities": {
+        "0": 0.2060213145596366,
+        "1": 0.29975924391262715,
+        "2": 0.4942194415277362
+      },
+      "confidence": 0.0
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "cases_hash_format": "UTF-8 with LF line endings"
+}

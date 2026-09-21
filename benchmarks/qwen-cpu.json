@@ -1,0 +1,8 @@
+{
+  "factory": "examples.qwen:load_engine",
+  "kwargs": {
+    "device": "cpu",
+    "quantization": "none",
+    "max_tokens": 8192
+  }
+}
