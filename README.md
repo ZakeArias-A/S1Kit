@@ -2,7 +2,7 @@
 
 **System One on your model.**
 
-用 PyTorch 语言模型完成分类、评分和真假判断。每题一次主干前向，直接读取候选 logits，无需生成和解析回答文本。模型与预处理由调用方选择，不修改模型权重。
+用Transformer完成分类、评分和真假判断。直接读取候选 logits，无需生成和解析回答文本。
 
 [文档](docs/README.md) · [示例](examples/README.md) · [评测](benchmarks/README.md) · [贡献](CONTRIBUTING.md)
 
@@ -85,17 +85,10 @@ uv run --no-sync python examples/text.py ./my-model --customize
 
 复杂案例将三张不同尺寸的图片作为共同证据：页面提供订单和库存，文档提供有效政策，实物照片提供实际颜色。模型需要联合判断颜色是否相符、是否在售后期限内、对应商品是否有库存，再选择退款、换货或其他处理方式。
 
-| 订单页面 | 政策文档 | 实物照片 |
-|---|---|---|
-| ![订单页面](examples/vision/complex/order-1.png) | ![政策文档](examples/vision/complex/policy.png) | ![实物照片](examples/vision/complex/item.jpg) |
-
-订单与政策为虚构测试材料，实物照片未修改。对照案例分别改变库存、订购颜色、日期，并移除实物照，完整条件与预期答案见[图文案例](examples/vision/README.md)。
-
 | 测试 | S1Kit + Qwen3.5-4B | TypeSafe Jev 1.13.0 |
 |---|---|---|
 | JevBench 公开题集 | 173/231 · 74.9% | 197/231 · 85.3% |
 | 基础图文示例 | 5/6 | — |
-| 复杂多图示例 | 1/5 | — |
 
 上述结果测于 2026-09-21。本地使用 RTX 4060 Laptop、NF4 4-bit、BF16，未训练或校准；JevBench 使用全部 231 道公开题，不是官方榜单分数。图文数据是小规模应用示例，复杂多图的 1/5 表明该配置尚不能可靠完成此类判断。查看[评测方法与逐题数据](benchmarks/README.md)及[图文输入与失败案例](examples/vision/README.md)。
 
